@@ -9,7 +9,7 @@ const VALID_PACKAGES = [
   "handler", "repository", "route", "service"
 ];
 
-const LOG_API_URL = "http://20.207.122.201/evaluation-service/logs";
+const LOG_API_URL = typeof window !== "undefined" ? "/api/proxy/logs" : "http://20.207.122.201/evaluation-service/logs";
 
 export async function Log(
   stack: string,
@@ -30,7 +30,7 @@ export async function Log(
     return;
   }
 
-  const token = process.env.LOG_TOKEN;
+  const token = process.env.LOG_TOKEN || process.env.NEXT_PUBLIC_LOG_TOKEN;
   if (!token) {
     console.error("LOG_TOKEN is not set in environment");
     return;

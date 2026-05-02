@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist",
+    "rootDir": "../../../logging_middleware/src",
+    "outDir": "../../../logging_middleware/dist",
     "module": "commonjs",
     "target": "ES6",
-    "lib": ["es2016", "dom"],
-    "types": ["node"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
