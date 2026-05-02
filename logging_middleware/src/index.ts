@@ -9,7 +9,7 @@ const VALID_PACKAGES = [
   "handler", "repository", "route", "service"
 ];
 
-const LOG_API_URL = typeof window !== "undefined" ? "/api/proxy/logs" : "http://20.207.122.201/evaluation-service/logs";
+const LOG_API_URL = "http://20.207.122.201/evaluation-service/logs";
 
 export async function Log(
   stack: string,

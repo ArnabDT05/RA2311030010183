@@ -7,7 +7,7 @@ export interface Notification {
   Timestamp: string;
 }
 
-const BASE_URL = "/api/proxy";
+const BASE_URL = "http://20.207.122.201/evaluation-service";
 
 // token lives in env, make sure .env.local has it
 const getToken = () => process.env.NEXT_PUBLIC_LOG_TOKEN ?? "";
